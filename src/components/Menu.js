@@ -9,7 +9,7 @@ const Menu=()=>{
         setGameStatus(GameStatus.play);
     }
     function restartGame(){
-        window.location=true;
+        window.location=window.location;
     }
     return(
         <ul className="Menu">
