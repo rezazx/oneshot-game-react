@@ -17,7 +17,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Install Projects
 - `git clone https://github.com/rezazx/oneshot-game-react`
-- `cd oneshot-game`
+- `cd oneshot-game-react`
 - `npm install`
 - `npm start`
 
