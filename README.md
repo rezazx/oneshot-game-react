@@ -3,6 +3,18 @@ A simple game with JavaScript and React to destroy your enemies.\
 This project is developed for fun only.\
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Screenshots
+
+<img src="https://github.com/rezazx/oneshot-game-react/blob/master/capture/oneshot_0000_Layer%2011.jpg" width="200">
+<img src="https://github.com/rezazx/oneshot-game-react/blob/master/capture/oneshot_0001_Layer%2010.jpg" width="200">
+<img src="https://github.com/rezazx/oneshot-game-react/blob/master/capture/oneshot_0002_Layer%207.jpg" width="200">
+<img src="https://github.com/rezazx/oneshot-game-react/blob/master/capture/oneshot_0003_Layer%208.jpg" width="200">
+<img src="https://github.com/rezazx/oneshot-game-react/blob/master/capture/oneshot_0004_Layer%206.jpg" width="200">
+<img src="https://github.com/rezazx/oneshot-game-react/blob/master/capture/oneshot_0005_Layer%204.jpg" width="200">
+<img src="https://github.com/rezazx/oneshot-game-react/blob/master/capture/oneshot_0006_Layer%201.jpg" width="200">
+
+
+
 ## Install Projects
 - `git clone https://github.com/rezazx/oneshot-game-react`
 - `cd oneshot-game`
