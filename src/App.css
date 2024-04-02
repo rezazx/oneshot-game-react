@@ -34,6 +34,22 @@
 .Info b{
   color: #a92901;
 }
+
+.Lives{
+  display: flex;
+  justify-content: space-around;
+  width: max-content;
+  align-items: center;
+}
+.Lives .heart{
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  background: transparent url(./assets/heart.png) no-repeat;
+}
+.Lives .heart.off{
+  filter: grayscale(100%);
+}
 .Shooter{
   width: 60px;
   height: 60px;
@@ -121,8 +137,8 @@
   box-shadow: 0 0 8px #1d1d1d;
   position: absolute;
   left: 50%;
-  top: 150px;
-  transform: translate(-50%,0);
+  top: 25px;
+  transform: translateX(-50%);
   width: 300px;
   height: auto;
   z-index: 999999;

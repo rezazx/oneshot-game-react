@@ -78,10 +78,9 @@ const Bullet=({radian,speed,id})=>{
     }
 
     useEffect(() => {
-        // console.log(radian);
         const move=()=>{
-            const dX=3 * Math.cos(radian);
-            const dY=3 * Math.sin(radian);
+            const dX=4 * Math.cos(radian);
+            const dY=4 * Math.sin(radian);
 
             setPos({x:pos.x+dX,y:pos.y+dY});
             checkHitToBarrier();
@@ -94,7 +93,6 @@ const Bullet=({radian,speed,id})=>{
           }
         interval.current=setInterval(move,speed);
         
-        // if(between(pos.x,))
         return () => {
             clearInterval(interval.current);
         };
