@@ -59,7 +59,6 @@ const Shooter=()=>{
     useEffect(()=>{
         if(gameStatus===GameStatus.play){
             setTimeout(()=>{
-                console.log('shooter added events');
                 center.x=shooter.current?.getBoundingClientRect().left+shooter.current?.getBoundingClientRect().width/2;
                 center.y=shooter.current?.getBoundingClientRect().top+shooter.current?.getBoundingClientRect().height/2;
                 document.addEventListener("mousemove", mouseHandler);
@@ -70,7 +69,6 @@ const Shooter=()=>{
         }
 
         if(gameStatus!==GameStatus.play){
-            console.log('shooter remove events');
             document.removeEventListener("mousemove", mouseHandler);
             window.removeEventListener("resize", resizeHandler);
             document.removeEventListener("click",fireHandler);

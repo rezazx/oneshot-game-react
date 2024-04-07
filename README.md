@@ -14,7 +14,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <img src="https://github.com/rezazx/oneshot-game-react/blob/master/capture/oneshot_0006_Layer%201.jpg" width="200">
 
 
-
 ## Install Projects
 - `git clone https://github.com/rezazx/oneshot-game-react`
 - `cd oneshot-game-react`
@@ -23,14 +22,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Game Rules
 There are three types of enemies in this game:\
-1- Small red creatures that move slowly. Killing each of these creatures has 5 points.\
-2- Creatures relatively bigger and faster than the previous one with pink color, killing these creatures has 10 points.\
-3- Very fast creatures with blue color, killing this creature has 20 points.\
-If one of these enemies hits your tank, the game is over.\
+1- <img src="https://github.com/rezazx/oneshot-game-react/blob/master/src/assets/enemy.png" width="20" style="displat:inline;"> Small red creatures that move slowly. Killing each of these creatures has 5 points.\
+2- <img src="https://github.com/rezazx/oneshot-game-react/blob/master/src/assets/enemy2.png" width="20" style="displat:inline;">Creatures relatively bigger and faster than the previous one with pink color, killing these creatures has 10 points.\
+3- <img src="https://github.com/rezazx/oneshot-game-react/blob/master/src/assets/enemy3.png" width="20" style="displat:inline;">Very fast creatures with blue color, killing this creature has 20 points.\
+If one of these enemies hits your tank, the game is over.
 
 Walls are another component of the game. Destroying them does not score points, but your bullet will not pass through them. The green wall needs three bullets, the red one needs two bullets and the white one one bullet to destroy.\
 If your bullet does not hit anything, you will lose 10 points.\
-As the level of the game progresses, enemies and walls are built faster and more in number.\
+As the level of the game progresses, enemies and walls are built faster and more in number.
+
+### Newly added
+<img src="https://github.com/rezazx/oneshot-game-react/blob/master/src/assets/enemy4.png" width="20" style="displat:inline;"> A new enemy will be added to the game that by shooting you, every bullet that hits you will take one life from you, so your life in the game will be zero.
 
 ## License
 

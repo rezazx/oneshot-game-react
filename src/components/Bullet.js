@@ -55,7 +55,6 @@ const Bullet=({radian,speed,id})=>{
             const h=barriers[i].height;
             if(between(pos.x,eX-w,eX+w) && between(pos.y,eY-h,eY+h))
             {
-                console.log('hit to barrier')
                 audioEffect(explodemp3);
                 barriers[i].hardness -=1;
                 setGame({...game,barriers:barriers});

@@ -5,9 +5,9 @@ const Lives=()=>{
     let _lives=[];
     for(let i=0;i<5;i++){
         if(i<lives)
-            _lives.push(<div class="heart"></div>);
+            _lives.push(<div className="heart" key={'heart'+i}></div>);
         else
-            _lives.push(<div class="heart off"></div>);
+            _lives.push(<div className="heart off"></div>);
     }
 
     return(

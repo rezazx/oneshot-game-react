@@ -22,6 +22,7 @@ function App() {
         enemies:[],
         bullets:[],
         barriers:[],
+        enemyBullets:[],
     });
     const [score,setScore]=useState(0);
     const [gameStatus,setGameStatus]=useState(GameStatus.stop);
@@ -49,12 +50,12 @@ function App() {
             const centerY=window.innerHeight/2;
             const enemies=game.enemies;
             for(let i=0;i<4;i++){
-                const x=randInt(appRef.current?.getBoundingClientRect().width-20)+appRef.current?.getBoundingClientRect().left;
-                const y=randInt(appRef.current?.getBoundingClientRect().height-20)+appRef.current?.getBoundingClientRect().top;
+                const x=randInt(appRef.current?.getBoundingClientRect().width-30)+appRef.current?.getBoundingClientRect().left;
+                const y=randInt(appRef.current?.getBoundingClientRect().height-30)+appRef.current?.getBoundingClientRect().top;
 
                 if(between(x,centerX-100,centerX+100) && between(y,centerY-100,centerY+100))
                     return;
-                const speed=randInt(9)+1;
+                const speed=randInt(10);
                 let value=5;
                 if(speed>7)
                     value=10;
@@ -106,6 +107,12 @@ function App() {
         }
         setGame({...game,barriers:barriers});
     },[level]);
+    //check lives
+        //create barriers
+        useEffect(()=>{
+            if(lives<=0)
+                setGameStatus(GameStatus.loos);
+        },[lives]);
     //setup background music
     useEffect(()=>{
         const playMusic=()=>{

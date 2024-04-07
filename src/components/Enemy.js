@@ -5,17 +5,16 @@ import { EnemyStatus, GameStatus } from "../inc/types";
 import { between, randInt } from "../inc/util";
 import explodemp3 from "../assets/explode.mp3";
 
-const Enemy=({startPosition,speed,id,degree,status})=>{
+const Enemy=({startPosition,speed,id,degree,status,onChangePosition})=>{
     const [pos,setPos]=useState(startPosition);
     const {game,setGame,gameStatus,setGameStatus}=useContext(GameContext);
 
     const interval=useRef();
-    const _T=800/speed;
 
     const isHitShooter=()=>{
         const centerX=window.innerWidth/2;
         const centerY=window.innerHeight/2;
-        if(between(pos.x,centerX-30,centerX+30) && between(pos.y,centerY-30,centerY+30))
+        if(between(pos.x,centerX-35,centerX+20) && between(pos.y,centerY-35,centerY+20))
             return true;
         return false;
     }
@@ -43,8 +42,12 @@ const Enemy=({startPosition,speed,id,degree,status})=>{
     }
 
     useEffect(() => {
+        if(speed===0)
+            return;
         if(gameStatus!==GameStatus.play)
             return ;
+        const _T=800/speed;
+        
         const centerX=window.innerWidth/2;
         const centerY=window.innerHeight/2;
         const move=()=>{
@@ -65,7 +68,9 @@ const Enemy=({startPosition,speed,id,degree,status})=>{
                 tmpY -=randInt(3)+1;
             setCurrentPositionInGameContext({x:tmpX,y:tmpY});
             setPos({x:tmpX,y:tmpY});
-
+            if(typeof(onChangePosition)==="function")
+                onChangePosition({x:tmpX,y:tmpY});
+            
             if(isHitShooter())
             {
                 audioEffect(explodemp3);
@@ -96,6 +101,8 @@ const Enemy=({startPosition,speed,id,degree,status})=>{
 
     },[status]);
     let cl=`Enemy`;
+    if(speed===0)
+        cl ='Enemy e4';
     if(speed>7)
         cl ='Enemy e2';
     if(speed>12)

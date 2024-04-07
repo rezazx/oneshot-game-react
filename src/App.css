@@ -98,6 +98,9 @@
 .Enemy.e3{
   background-image: url(./assets/enemy3.png);
 }
+.Enemy.e4{
+  background-image: url(./assets/enemy4.png);
+}
 .Enemy.explode{
   background-image: url(./assets/fire.gif);
 }
@@ -113,6 +116,29 @@
   z-index: 20;
 }
 
+.EnemyBullet{
+  width: 4px;
+  height: 4px;
+  background: rgb(200,150,20);
+  background: radial-gradient(circle, rgba(200,100,20,1) 0%, rgba(252,20,10,1) 100%);
+  box-shadow: 0 0 4px #ff0000;
+  border-radius: 50%;
+  position: fixed;
+  transform-origin: center;
+  z-index: 20;
+}
+
+.EnemyBullet.explode{
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  background:transparent url(./assets/fire.gif) no-repeat;
+  position: fixed;
+  z-index: 200;
+  transform-origin: center;
+  box-shadow: none;
+  border-radius: 0;
+}
 .Barrier{
   width: 40px ;
   height: 20px;
