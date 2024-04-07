@@ -1,5 +1,5 @@
 import { GameContext } from "App";
-import { BulletStatus } from "inc/types";
+import { BulletStatus, EnemyStatus } from "inc/types";
 import { randInt } from "inc/util";
 import { useRef, useState, useEffect, useContext } from "react";
 import Enemy from "./Enemy";
@@ -15,6 +15,8 @@ const EnemyShooter=({data})=>{
 
     useEffect(() => {
         const move=()=>{
+            if(data.status!==EnemyStatus.live)
+                return;
             const tmp=game.enemyBullets;
             tmp.push({initPos:data.startPosition,status:BulletStatus.live,key:300000+tmp.length,parentKey:data.key});
             setGame({...game,enemyBullets:tmp});

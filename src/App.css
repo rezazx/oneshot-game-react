@@ -19,7 +19,7 @@
 .Info{
   position: fixed;
   width: 500px;
-  background: #737362;
+  background: #737362aa;
   color: #1d1d1d;
   border-radius: 10px;
   top: 0;
@@ -186,4 +186,30 @@ a{color: #292901;text-decoration: none;font-weight: bold;}
   color: #fff;
   text-shadow: 0 0 4px #000;
   cursor: pointer;
+}
+
+
+@media screen and (max-width: 1024px){
+  .App{
+    max-width: 100%;
+    max-height: calc(100% - 8px);
+  }
+  .Menu{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .Info{
+    width: 100px;
+    height: auto;
+    flex-wrap: wrap;
+    left: 10px;
+    top: 10px;
+    transform: none;
+  }
+  .Lives .heart{
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+  }
 }
