@@ -61,7 +61,9 @@ function App() {
                     value=10;
                 if(speed===7)
                     value=20;
-                
+                if(speed===0)
+                    value=30;
+                    
                 enemies.push({
                     speed:speed===7?15:speed,
                     startPosition:{x:x,y:y},
@@ -117,7 +119,7 @@ function App() {
         if(lives<5)
             setLives(lives+1)
     },[level]);
-    
+
     //setup background music
     useEffect(()=>{
         const playMusic=()=>{

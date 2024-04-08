@@ -32,7 +32,7 @@ If your bullet does not hit anything, you will lose 10 points.\
 As the level of the game progresses, enemies and walls are built faster and more in number.
 
 ### Newly added
-<img src="https://github.com/rezazx/oneshot-game-react/blob/master/src/assets/enemy4.png" width="20" style="displat:inline;"> A new enemy has been added to the game that has the ability to shoot you, every bullet that hits you takes one life from you and when your life is zero, the game is over.\
+<img src="https://github.com/rezazx/oneshot-game-react/blob/master/src/assets/enemy4.png" width="20" style="displat:inline;"> A new enemy has been added to the game that has the ability to shoot you, every bullet that hits you takes one life from you and when your life is zero, the game is over.Killing these is worth 30 points.\
 As the game level increases, if your number of "lives" is less than 5, a number will be added to it.
 
 ## License
