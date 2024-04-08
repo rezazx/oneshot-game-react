@@ -108,11 +108,16 @@ function App() {
         setGame({...game,barriers:barriers});
     },[level]);
     //check lives
-        //create barriers
-        useEffect(()=>{
-            if(lives<=0)
-                setGameStatus(GameStatus.loos);
-        },[lives]);
+    useEffect(()=>{
+        if(lives<=0)
+            setGameStatus(GameStatus.loos);
+    },[lives]);
+
+    useEffect(()=>{
+        if(lives<5)
+            setLives(lives+1)
+    },[level]);
+    
     //setup background music
     useEffect(()=>{
         const playMusic=()=>{
